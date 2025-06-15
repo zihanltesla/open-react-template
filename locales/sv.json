@@ -1,0 +1,18 @@
+{
+  "header": {
+    "solutions": "Lösningar",
+    "emailUs": "E-posta oss"
+  },
+  "hero": {
+    "title": "AI-lösningar för ditt företag",
+    "subtitle": "Förvandla ditt företag med banbrytande AI-teknik",
+    "cta": "Kom igång"
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "name": "Ditt namn",
+    "email": "E-postadress",
+    "message": "Ditt meddelande",
+    "send": "Skicka meddelande"
+  }
+}

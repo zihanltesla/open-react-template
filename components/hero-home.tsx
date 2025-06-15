@@ -3,9 +3,15 @@
 import { useState } from 'react';
 import ModalContact from './modal-contact';
 import { useTheme } from '@/app/theme/ThemeProvider';
+import { useLanguage } from '@/context/LanguageContext';
+
+import ModalVideo from './modal-video';
+import VideoThumb from '../public/images/hero-image-01.jpg';
+import localFont from 'next/font/local';
 
 export default function HeroHome() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const { language } = useLanguage();
 
   return (
     <>
@@ -13,9 +19,9 @@ export default function HeroHome() {
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="py-12 md:py-20">
+        <div className="py-8 md:py-12">
           {/* Section header */}
-          <div className="pb-12 text-center md:pb-20">
+          <div className="pb-6 text-center md:pb-10">
             <h1
               className="animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
               style={{
@@ -23,7 +29,7 @@ export default function HeroHome() {
               }}
               data-aos="fade-up"
             >
-              Future-Proof AI Solutions
+              {language === 'en' ? 'AI Solution Konsult Sweden' : 'AI Lösningskonsult Sverige'}
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -34,49 +40,14 @@ export default function HeroHome() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                We build safe, sustainable, and customized AI systems to elevate your business. From automation to decision-making – we turn your data into action.
+                {language === 'en' 
+                  ? 'We provide comprehensive AI consulting services, guiding you from concept to deployment and beyond, ensuring innovative and effective solutions for your business needs.'
+                  : 'Vi erbjuder omfattande AI-konsulttjänster som guidar dig från koncept till implementering och vidare, med innovativa och effektiva lösningar för dina affärsbehov.'}
               </p>
-              <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-                <div data-aos="fade-up" data-aos-delay={400}>
-                  {/* <a
-                    className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    href="#0"
-                  >
-                    <span className="relative inline-flex items-center">
-                    Contact Us
-                      <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                        {'>'}
-                      </span>
-                    </span>
-                  </a> */}
-                </div>
-                <div data-aos="fade-up" data-aos-delay={600}>
-                  <a
-                    className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
-                    href="#0"
-                  >
-                    Explore Services
-                  </a>
-                </div>
-                <div data-aos="fade-up" data-aos-delay={800}>
-                  <a
-                    className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:ml-4 sm:w-auto"
-                    onClick={() => setIsContactOpen(true)}
-                    href="#"
-                  >
-                    <span className="relative inline-flex items-center">
-                    Email Us
-                      <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                        {'>'}
-                      </span>
-                    </span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* <ModalVideo
+          <ModalVideo
             thumb={VideoThumb}
             thumbWidth={1104}
             thumbHeight={576}
@@ -84,7 +55,7 @@ export default function HeroHome() {
             video="videos//video.mp4"
             videoWidth={1920}
             videoHeight={1080}
-          /> */}
+          />
         </div>
       </div>
     </section>

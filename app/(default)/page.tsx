@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Open PRO",
+  title: "AI Solution Konsult Sweden",
   description: "Page description",
 };
 
@@ -16,9 +16,9 @@ export default function Home() {
       <PageIllustration />
       <Hero />
       <Workflows />
-      <Features />
+      {/* <Features />
       <Testimonials />
-      <Cta />
+      <Cta /> */}
     </>
   );
 }

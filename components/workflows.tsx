@@ -24,7 +24,7 @@ export default function Workflows() {
                           }}
                           data-aos="fade-up"
                         >
-              Map your product journey
+              AI Revolution
             </h2>
             <p
                 className="mb-8 text-xl"
@@ -34,9 +34,7 @@ export default function Workflows() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-              Simple and elegant interface to start collaborating with your team
-              in minutes. It seamlessly integrates with your code and your
-              favorite programming languages.
+              Transforming Ideas into Intelligent Solutions
             </p>
           </div>
           {/* Spotlight items */}

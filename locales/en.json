@@ -1,0 +1,18 @@
+{
+  "header": {
+    "solutions": "Solutions",
+    "emailUs": "Email Us"
+  },
+  "hero": {
+    "title": "AI Solutions for Your Business",
+    "subtitle": "Transform your enterprise with cutting-edge AI technology",
+    "cta": "Get Started"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Your Message",
+    "send": "Send Message"
+  }
+}
