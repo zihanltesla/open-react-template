@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ModalContact from './modal-contact';
+import { useTheme } from '@/app/theme/ThemeProvider';
 
 export default function HeroHome() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -16,14 +17,20 @@ export default function HeroHome() {
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
+              className="animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
+              style={{
+                backgroundImage: `linear-gradient(to right, ${useTheme().theme.primary}, ${useTheme().theme.secondary}, ${useTheme().theme.muted}, ${useTheme().theme.accent}, ${useTheme().theme.primary})`
+              }}
               data-aos="fade-up"
             >
               Future-Proof AI Solutions
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-xl text-indigo-200/65"
+                className="mb-8 text-xl"
+                style={{
+                  color: useTheme().isDarkMode ? 'rgba(199, 210, 254, 0.65)' : useTheme().theme.text
+                }}
                 data-aos="fade-up"
                 data-aos-delay={200}
               >

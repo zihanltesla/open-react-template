@@ -1,9 +1,9 @@
 export const lightTheme = {
   background: '#ffffff',
   text: '#000000',
-  primary: '#2563eb',
-  secondary: '#4f46e5',
-  accent: '#7c3aed',
+  primary: '#1d4ed8',  // Darker blue
+  secondary: '#4338ca', // Darker indigo
+  accent: '#6d28d9',   // Darker purple
   muted: '#f3f4f6',
   border: '#e5e7eb'
 }
