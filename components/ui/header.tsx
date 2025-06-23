@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <>
       <ModalContact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-      <header className="z-50 mt-2 w-full md:mt-5">
+      <header className="z-50 w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div 
           className="relative flex h-14 items-center justify-between gap-3 rounded-2xl px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs"
@@ -66,26 +66,26 @@ export default function Header() {
               </Link>
             </li>
             <li className="hidden sm:block">
-            <div data-aos="fade-up" data-aos-delay={800}>
-<a
-  className="btn-sm bg-gray-800/80 hover:bg-gray-700/80 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-  style={{
-    backgroundImage: `linear-gradient(to top, ${useTheme().theme.accent}, ${useTheme().theme.primary})`,
-    color: 'white'
-  }}
-  onClick={() => setIsContactOpen(true)}
-  href="#"
->
-  <span className="relative inline-flex items-center">
-    {language === 'en' ? 'Email Us' : 'E-posta oss'}
-    <span 
-      className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5"
-      style={{ color: 'white' }}
-    >
-      {'>'}
-    </span>
-  </span>
-</a>
+            <div>
+                <a
+                  className="btn-sm bg-gray-800/80 hover:bg-gray-700/80 text-white px-4 py-2 rounded-lg"
+                  style={{
+                    backgroundImage: `linear-gradient(to top, ${useTheme().theme.accent}, ${useTheme().theme.primary})`,
+                    color: 'white'
+                  }}
+                  onClick={() => setIsContactOpen(true)}
+                  href="#"
+                >
+                  <span className="relative inline-flex items-center">
+                    {language === 'en' ? 'Email Us' : 'E-posta oss'}
+                    <span 
+                      className="ml-1 tracking-normal"
+                      style={{ color: 'white' }}
+                    >
+                      {'>'}
+                    </span>
+                  </span>
+                </a>
                 </div>
             </li>
           </ul>

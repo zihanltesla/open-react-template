@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default function Solutions() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -68,8 +69,9 @@ export default function Home() {
       />
       <main>
         <PageIllustration />
-        <Hero />
-        {/* <Workflows /> */}
+        <div className="mt-16">
+          <Workflows />
+        </div>
         {/* <Features />
         <Testimonials />
         <Cta /> */}
