@@ -73,8 +73,8 @@ export default function Solutions() {
           <Workflows />
         </div>
         {/* <Features />
-        <Testimonials />
-        <Cta /> */}
+        <Testimonials />*/}
+        <Cta /> 
       </main>
     </>
   );

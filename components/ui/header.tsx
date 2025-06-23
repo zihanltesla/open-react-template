@@ -40,20 +40,76 @@ export default function Header() {
               </button>
             </li>
             <li>
-              <div className="relative min-w-[80px] sm:min-w-[100px] language-selector">
-                <select 
-                  className="bg-transparent text-gray-300 text-xs sm:text-sm px-1 sm:px-2 py-1 rounded border border-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-500 w-full"
-                  defaultValue="en"
-                  onChange={(e) => {
-                    const lang = e.target.value as 'en' | 'sv';
-                    setLanguage(lang);
-                  }}
-                >
-                  <option value="en">English</option>
-                  <option value="sv">Svenska</option>
-                </select>
-              </div>
-            </li>
+  {/* 美化后的自定义语言切换下拉菜单 */}
+  <div className="relative min-w-[80px] sm:min-w-[100px] language-selector">
+    {(() => {
+      const [open, setOpen] = useState(false);
+      const options = [
+        { value: "en", label: "English" },
+        { value: "sv", label: "Svenska" },
+      ];
+      const selected = options.find((o) => o.value === language);
+      return (
+        <div className="relative">
+          <button
+            type="button"
+            className="flex items-center justify-between w-full px-3 py-1.5 rounded-xl bg-[rgba(30,41,59,0.92)] text-sm font-semibold shadow-md transition-all duration-150 focus:outline-none"
+            style={{
+              background: theme.muted,
+              fontFamily: "inherit",
+              color: theme.text,
+            }}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="flex items-center gap-2">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" className="inline-block mr-1">
+                <circle cx="12" cy="12" r="10" stroke={theme.accent} strokeWidth="2" fill="none"/>
+                <text x="12" y="16" textAnchor="middle" fontSize="12" fill={theme.accent} fontWeight="bold">
+                  {selected?.label[0]}
+                </text>
+              </svg>
+              {selected?.label}
+            </span>
+            <svg className={`ml-2 h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} fill="none" stroke={theme.accent} strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          {open && (
+            <ul
+              className="absolute left-0 z-20 mt-2 w-full rounded-xl bg-[rgba(30,41,59,0.96)] shadow-2xl py-1 animate-fade-in"
+              style={{
+                background: theme.muted,
+              }}
+            >
+              {options.map((opt) => (
+                <li key={opt.value}>
+                  <button
+                    className={`w-full text-left px-4 py-2 rounded-lg text-base font-medium transition-all duration-100 border-0 ${
+                      language === opt.value
+                        ? "bg-[rgba(255,255,255,0.08)]"
+                        : "hover:bg-[rgba(255,255,255,0.04)]"
+                    }`}
+                    style={{
+                      fontFamily: "inherit",
+                      color: language === opt.value ? theme.accent : theme.text,
+                      border: "none",
+                    }}
+                    onClick={() => {
+                      setLanguage(opt.value as "en" | "sv");
+                      setOpen(false);
+                    }}
+                  >
+                    {opt.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    })()}
+  </div>
+</li>
             <li>
               <ThemeToggle />
             </li>

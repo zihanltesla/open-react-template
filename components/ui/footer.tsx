@@ -1,10 +1,12 @@
 import Logo from "./logo";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
+import { useTheme } from "@/app/theme/ThemeProvider";
 
 export default function Footer() {
+  const { isDarkMode } = useTheme();
   return (
-    <footer>
+    <footer className={isDarkMode ? "" : "bg-black text-white"}>
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Footer illustration */}
         <div
