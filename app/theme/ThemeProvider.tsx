@@ -18,9 +18,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme')
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
+
     setIsDarkMode(savedTheme ? savedTheme === 'dark' : prefersDark)
   }, [])
+
+  // Apply .dark class to html element
+  useEffect(() => {
+    const root = document.documentElement
+    if (isDarkMode) {
+      root.classList.add('dark')
+    } else {
+      root.classList.remove('dark')
+    }
+  }, [isDarkMode])
 
   const toggleTheme = () => {
     const newMode = !isDarkMode
@@ -32,12 +42,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   return (
     <ThemeContext.Provider value={{ theme, isDarkMode, toggleTheme }}>
-      <div style={{
-        backgroundColor: theme.background,
-        color: theme.text
-      }}>
-        {children}
-      </div>
+      {children}
     </ThemeContext.Provider>
   )
 }

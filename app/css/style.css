@@ -91,3 +91,24 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+/* Theme variables */
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --primary: #1d4ed8;
+  --secondary: #4338ca;
+  --accent: #6d28d9;
+  --muted: #f3f4f6;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --text: #f3f4f6;
+  --primary: #3b82f6;
+  --secondary: #6366f1;
+  --accent: #8b5cf6;
+  --muted: #1f2937;
+  --border: #374151;
+}

@@ -67,25 +67,25 @@ export default function Header() {
             </li>
             <li className="hidden sm:block">
             <div data-aos="fade-up" data-aos-delay={800}>
-                  <a
-                    className="btn group w-full bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] sm:w-auto transition-all duration-200 z-50"
-                    style={{
-                      backgroundImage: `linear-gradient(to top, ${useTheme().theme.accent}, ${useTheme().theme.primary})`,
-                      color: useTheme().theme.text
-                    }}
-                    onClick={() => setIsContactOpen(true)}
-                    href="#"
-                  >
-                    <span className="relative inline-flex items-center">
-                      {language === 'en' ? 'Email Us' : 'E-posta oss'}
-                      <span 
-                        className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5"
-                        style={{ color: useTheme().theme.text }}
-                      >
-                        {'>'}
-                      </span>
-                    </span>
-                  </a>
+<a
+  className="btn-sm bg-gray-800/80 hover:bg-gray-700/80 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+  style={{
+    backgroundImage: `linear-gradient(to top, ${useTheme().theme.accent}, ${useTheme().theme.primary})`,
+    color: 'white'
+  }}
+  onClick={() => setIsContactOpen(true)}
+  href="#"
+>
+  <span className="relative inline-flex items-center">
+    {language === 'en' ? 'Email Us' : 'E-posta oss'}
+    <span 
+      className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5"
+      style={{ color: 'white' }}
+    >
+      {'>'}
+    </span>
+  </span>
+</a>
                 </div>
             </li>
           </ul>
