@@ -14,5 +14,40 @@
     "email": "E-postadress",
     "message": "Ditt meddelande",
     "send": "Skicka meddelande"
+  },
+  "solutions": {
+    "workflows": {
+      "pageTitle": "AI-drivna arbetsflödeslösningar | Effektivisera dina processer",
+      "pageDescription": "Upptäck våra skräddarsydda AI-arbetsflöden som förvandlar idéer till intelligenta lösningar med inbyggda verktyg, omedelbar skalbarhet och anpassade flöden.",
+      "sectionHeader": "Skräddarsydda arbetsflöden",
+      "mainTitle": "AI-revolutionen",
+      "mainDescription": "Förvandlar idéer till intelligenta lösningar",
+      "steps": [
+        {
+          "title": "AI-strategi & rådgivning",
+          "description": "Vi hjälper dig att utveckla en tydlig AI-strategi och identifiera möjligheter där AI kan ge mest värde till ditt företag. Våra konsulttjänster vägleder dig genom planering och prioritering för att säkerställa en framgångsrik AI-integrering."
+        },
+        {
+          "title": "Systemdesign & arkitektur",
+          "description": "Våra experter designar robusta och skalbara AI-system anpassade efter dina specifika behov. Vi fokuserar på att skapa flexibla arkitekturer som kan utvecklas med ditt företag och teknologiska framsteg."
+        },
+        {
+          "title": "AI-modellutveckling & implementering",
+          "description": "Vi bygger och implementerar skräddarsydda AI-modeller som möter dina unika utmaningar. Från maskininlärningsalgoritmer till djupa neurala nätverk – våra lösningar är utformade för att ge resultat och effektivitet."
+        },
+        {
+          "title": "Datahantering & ingenjörskonst",
+          "description": "Vi erbjuder omfattande datatjänster, inklusive insamling, rengöring, transformation och hantering. Vårt mål är att säkerställa att dina AI-modeller drivs av högkvalitativ och tillförlitlig data."
+        },
+        {
+          "title": "AI-testning & validering",
+          "description": "Noggrann testning och validering är avgörande för AI-framgång. Vi genomför omfattande tester för att säkerställa att dina AI-modeller är exakta, tillförlitliga och redo för driftsättning, vilket minimerar risker och maximerar prestanda."
+        },
+        {
+          "title": "Driftsättning & underhåll",
+          "description": "Vi stödjer smidig driftsättning av AI-lösningar i dina befintliga system och erbjuder löpande underhåll för att säkerställa fortsatt prestanda och optimering. Vårt team är dedikerat till att hålla dina AI-system igång smidigt och effektivt."
+        }
+      ]
+    }
   }
 }

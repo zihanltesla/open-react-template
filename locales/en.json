@@ -14,5 +14,40 @@
     "email": "Email Address",
     "message": "Your Message",
     "send": "Send Message"
+  },
+  "solutions": {
+    "workflows": {
+      "pageTitle": "AI-Powered Workflow Solutions | Streamline Your Processes",
+      "pageDescription": "Discover our tailored AI workflows that transform ideas into intelligent solutions with built-in tools, instant scalability, and customized flows.",
+      "sectionHeader": "Tailored Workflows",
+      "mainTitle": "AI Revolution",
+      "mainDescription": "Transforming Ideas into Intelligent Solutions",
+      "steps": [
+        {
+          "title": "AI Strategy & Consulting",
+          "description": "We help you develop a clear AI strategy, identifying opportunities where AI can add the most value to your business. Our consulting services guide you through the planning and prioritization process to ensure successful AI integration."
+        },
+        {
+          "title": "System Design & Architecture",
+          "description": "Our experts design robust and scalable AI systems tailored to your specific needs. We focus on creating flexible architectures that can evolve with your business and technological advancements."
+        },
+        {
+          "title": "AI Model Development & Implementation",
+          "description": "We build and implement custom AI models that address your unique challenges. From machine learning algorithms to deep learning networks, our solutions are designed to drive results and efficiency."
+        },
+        {
+          "title": "Data Engineering & Management",
+          "description": "We provide comprehensive data services, including data collection, cleaning, transformation, and management. Our goal is to ensure your AI models are powered by high-quality, reliable data."
+        },
+        {
+          "title": "AI Testing & Validation",
+          "description": "Rigorous testing and validation are crucial for AI success. We conduct extensive testing to ensure your AI models are accurate, reliable, and ready for deployment, minimizing risks and maximizing performance."
+        },
+        {
+          "title": "Deployment & Maintenance",
+          "description": "We support the seamless deployment of AI solutions into your existing systems and offer ongoing maintenance to ensure continued performance and optimization. Our team is dedicated to keeping your AI systems running smoothly and efficiently."
+        }
+      ]
+    }
   }
 }
